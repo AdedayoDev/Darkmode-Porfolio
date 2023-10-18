@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="sm:scroll-smooth" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            'widescreen': {'raw': '(min-aspect-ratio: 3/2)'},
+            'tallscreen': {'raw': '(min-aspect-ratio: 13/20)'},
+          },
+          keyframes: {
+            'open-menu': {
+              '0%': {transform: 'scaleY(0)'},
+              '80%': {transform: 'scaleY(1.2)'},
+              '100%': {transform: 'scaleY(1)'},
+            },
+          },
+
+          animation: {
+            'open': 'open-menu 0.5s ease-in-out forwards'
+          },
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="w-full bg-indigo-950">
+  <!-- NavBar  -->
+  <section id="about" class="w-full dark:bg-indigo-950 bg-indigo-950 py-4 shadow-lg">
+    <div class="w-4/5 flex items-center justify-between mx-auto gap-2">
+      <div class="text-center font-bold text-2xl  md:text-4xl text-teal-200 ">GoldKing</div>
+      <!-- Navs -->
+      <nav class="">
+        <ul class="hidden md:flex items-center justify-center gap-4 dark:text-white text-white animate-open-menu md:gap-4">
+          <li class="text-2xl font-bold"><a href="#home">Home</a></li>
+          <li class="text-2xl font-bold"><a href="#about"> About</a></li>
+          <li class="text-2xl font-bold"><a href="#services"> Services</a></li>
+          <li class="text-2xl font-bold"><a href="#skills"> Skills</a></li>
+          <li class="text-2xl font-bold"><a href="#projects"> Projects</a></li>
+          <li class="text-2xl font-bold"><a href="#contacts"> Contacts</a></li>
+        </ul>
+        <!-- hamburger -->
+        <button class="sm:hidden text-3xl text-white">&#9776;</button>
+      </nav>
+    </div>
+  </section>  
+  <!-- Hero Section -->
+  <section id="home"  class="py-12">
+    <div class="flex flex-col-reverse md:flex-row items-center justify-between w-11/12 mx-auto md:w-4/5 text-center md:text-left">
+      <div class="flex flex-col items-center justify-center py-8 w-full space-y-6 md:items-start md:justify-start">
+        <h1 class="text-4xl text-white font-bold"><span class="italic">Hi I'm John</span><span class="text-teal-200"> Frontend Web developer</span></h1>
+        <p class="text-white">With over 3 years of experience in building scalable and responsive web application using the ... STOCK. I have a position for solving complete problems and creating user-friendly interfaces with React, i'm always eager to learn new technologies and improves my skills you can check out some of my projects below or contact me if you want us to work together </p>
+
+        <div class="flex items-center justify-center gap-2 w-8 md:justify-start">
+          <img src="./Images/facebook.png" alt="">
+          <img src="./Images/youtube.png" alt="">
+          <img src="./Images/linkedin.png" alt="">
+        </div>
+        <button class="text-white text-2xl font-bold bg-gradient-to-l from-blue-500 to-blue-700 rounded-3xl py-2 px-8">Contact Me</button>
+      </div>
+      <div class="w-full ">
+        <div class="relative w-64 h-64 bg-white rounded-full mx-auto shadow-xl shadow-indigo-500">
+          <div class="absolute w-56 h-56 bg-teal-300 bottom-3 right-4 top-4 rounded-full mx-auto shadow-sm shadow-black"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me -->
+
+  <section class="py-12">
+    <div class="flex flex-col md:flex-row items-center justify-between w-4/5 mx-auto">
+      <div class="w-full ">
+        <div class="relative w-64 h-64 bg-white rounded-full mx-auto shadow-xl shadow-indigo-500">
+          <div class="absolute w-56 h-56 bg-teal-300 bottom-3 right-4 top-4 rounded-full mx-auto"></div>
+        </div>
+      </div>
+      <div class="flex flex-col items-center py-8 w-full md:items-start">
+        <h2 class="text-4xl text-white font-bold mb-4">About Me</h2>
+        <h3 class="text-xl font-bold text-white mb-2  md:text-2xl">Hello, My name is <span class="text-teal-200"> Ilesanmi Adedayo John</span></h3> 
+        <p class="text-white mb-6 text-center md:text-left">I am a MERN stack developer with over 3 years of experience in buiding web applications using MongoDB, Express, React and Node.js. I have worked on various projects ranging from e-commerce, social media, blogging chat and more. I am proficient in HTML, CSS, javaScript and TypeScript as well as APIs, GraphQl, Redux and Freebase. I am passionate about creating user-friendly, responsive and scalable web solutions that meet the needs and expectations of my clients. </p>
+        <button class="text-white text-2xl font-bold bg-gradient-to-l from-blue-500 to-blue-700 rounded-3xl py-2 px-8 " >Hire Me</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Services -->
+  <section id="services" class="w-4/5 mx-auto">
+    <h2 class="text-white text-center font-bold italic text-3xl mb-6">Our Services</h2>
+    <div class="flex flex-col items-center justify-between  gap-4 mb-12 md:flex-row">
+      <div class="flex flex-col  items-center justify-center w-96 p-4 bg-indigo-900 rounded-xl space-y-4">
+       <div class="w-8 ">
+        <img src="./Images/video-player.png" alt="" >
+       </div>
+       <h2 class="text-white font-bold text-xl ">Front-end</h2>
+       <p class="text-white text-center">I can use React.js a popular and powerful javaScript library, to create diplomatic and interactive user interfaces afor your website  i can also use HTML, CSS, javaScript and boostrap to design responsive and attractive layouts that adapt to different screen sizes abd devices </p>
+       <button class="text-white  font-bold bg-gradient-to-l from-blue-400 to-blue-700 rounded-3xl py-2 px-8 " >More About</button>
+      </div> 
+
+      <!-- Service 2 -->
+      <div class="flex flex-col items-center justify-center w-96 p-4 bg-indigo-900 rounded-xl space-y-4">
+       <div class="w-8 ">
+        <img src="./Images/video-player.png" alt="" >
+       </div>
+       <h2 class="text-white font-bold text-xl ">Database Management</h2>
+       <p class="text-white text-center">I can use MongoDB, a flexible and scalable NaSQL database to store and manage the data for your website, i  can also use Mangoose on object data modeling library, to define schamtics and models for your data and performs CLOUD operations</p>
+       <button class="text-white  font-bold bg-gradient-to-l from-blue-400 to-blue-700 rounded-3xl py-2 px-8 " >More About</button>
+      </div> 
+      <!-- Service 3 -->
+      <div class="flex flex-col items-center justify-center w-96 p-4 bg-indigo-900 rounded-xl space-y-4">
+       <div class="w-8 ">
+        <img src="./Images/browser-6.png" alt="" >
+       </div>
+       <h2 class="text-white font-bold text-xl ">Back-end</h2>
+       <p class="text-white text-center">I can also use Node.js a fast and scalabel javaScript runtime environment to handle the serve-side logic and functionality of your website. I can also use Express.js a minimalist and flexible web framework, to create RESTFUL APIs that communicate with the Front-end and the database </p>
+       <button class="text-white  font-bold bg-gradient-to-l from-blue-400 to-blue-700 rounded-3xl py-2 px-8 " >More About</button>
+      </div> 
+    </div>
+  </section>
+</body>
+</html>
